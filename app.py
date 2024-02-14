@@ -78,8 +78,39 @@
 #     for number1 in range(3):
 #         print(f"{number}, {number1}")
 
-# while loop 
+# while loop
 # command = ""
 # while command.lower() != "quit":
 #     command = input(">")
 #     print("ECHO", command)
+
+# functions
+# def mutiply(*numbers):
+#     print(numbers)
+
+
+# def save_def(**user):
+#     print(user)
+
+# def multiply(*numbers):
+#     total = 1
+#     for number in numbers:
+#         total *= number
+#     return total
+
+
+# print("Start")
+# print(multiply(1, 2, 3, 4))
+
+# fizzbuzz
+# def fizz_buzz(input):
+#     if input % 5 == 0 and input % 3 == 0:
+#         return "FizzBuzz"
+#     elif input % 3 == 0:
+#         return "Fizz"
+#     elif input % 5 == 0:
+#         return "Buzz"
+#     else:
+#         return input
+
+# print(fizz_buzz(1))
