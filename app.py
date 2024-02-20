@@ -1,4 +1,5 @@
 # import math
+from collections import deque
 # print("Hello world 😂")
 # print("*" * 10)
 
@@ -192,8 +193,16 @@
 # print(list(zip("abc", list1, list2)))
 
 # stacks
-browsing_session = []
-browsing_session.append(1)
-browsing_session.pop()
-if not browsing_session:
-    browsing_session[-1]
+# browsing_session = []
+# browsing_session.append(1)
+# browsing_session.pop()
+# if not browsing_session:
+#     browsing_session[-1]
+
+# queue
+# queue = deque([])
+# queue.append(1)
+# queue.append(2)
+# queue.append(3)
+# queue.popleft()
+# print(queue)
