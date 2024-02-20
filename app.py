@@ -1,6 +1,7 @@
 # import math
-from collections import deque
-from array import array
+# from collections import deque
+# from array import array
+from sys import getsizeof
 # print("Hello world 😂")
 # print("*" * 10)
 
@@ -233,7 +234,22 @@ from array import array
 # for key, value in point.items():
 #     print(key, value)
 
-dic = {x: x * 2 for x in range(5)}
-values = [ x * 2 for x in range(5)]
-sets = {x * 2 for x in range(5)}
-print(values)
+# dic = {x: x * 2 for x in range(5)}
+# values = [ x * 2 for x in range(5)]
+# sets = {x * 2 for x in range(5)}
+# print(values)
+
+# generator
+# values = (x * 2 for x in range(100000))
+# print(getsizeof(values))
+
+# unpacking operator
+# first = [1,2]
+# second = [3]
+# values = [*first, *second, *"hello"]
+# print(values)
+
+first = {"x": 1}
+second = {"x" : 10, "y": 2}
+combined = {**first, **second, "z": 1}
+print(combined)
