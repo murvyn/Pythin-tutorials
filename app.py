@@ -209,4 +209,31 @@ from array import array
 # print(queue)
 
 # array
-numbers = array("i", [1,2,3])
+# numbers = array("i", [1,2,3])
+
+# sets
+# numbers = [1, 1, 2, 3, 4]
+# first = set(numbers)
+# second = {1, 5}
+# print(first | second)
+# print(first & second)
+# print(first - second)
+# print(first ^ second)
+
+# dictionaries
+# point = {"x": 1, "y": 2}
+# point = dict(x=1, y=2)
+# point["x"] = 10
+# point["z"] = 20
+# if "a" in point:
+#     print(point["a"])
+# print(point.get("a", 0))
+# del point["x"]
+# print(point)
+# for key, value in point.items():
+#     print(key, value)
+
+dic = {x: x * 2 for x in range(5)}
+values = [ x * 2 for x in range(5)]
+sets = {x * 2 for x in range(5)}
+print(values)
