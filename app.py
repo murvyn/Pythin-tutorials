@@ -160,11 +160,11 @@
 # print(sorted(numbers, reverse=True))
 # print(numbers)
 
-items = [
-    ("Product1", 10),
-    ("Product3", 14),
-    ("Product2", 9),
-]
+# items = [
+#     ("Product1", 10),
+#     ("Product3", 14),
+#     ("Product2", 9),
+# ]
 
 
 # def sort_item(item):
@@ -183,5 +183,10 @@ items = [
 # print(filtered)
 
 # list conprehension
-prices = [item[1] for item in items]
-filtered = [item for item in items if item[1] >= 10]
+# prices = [item[1] for item in items]
+# filtered = [item for item in items if item[1] >= 10]
+
+# zip function
+list1 = [1,2,3]
+list2 = [10,20,30]
+print(list(zip("abc", list1, list2)))
