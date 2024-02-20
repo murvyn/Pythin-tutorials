@@ -1,7 +1,8 @@
 # import math
 # from collections import deque
 # from array import array
-from sys import getsizeof
+# from sys import getsizeof
+from pprint import pprint
 # print("Hello world 😂")
 # print("*" * 10)
 
@@ -249,7 +250,21 @@ from sys import getsizeof
 # values = [*first, *second, *"hello"]
 # print(values)
 
-first = {"x": 1}
-second = {"x" : 10, "y": 2}
-combined = {**first, **second, "z": 1}
-print(combined)
+# first = {"x": 1}
+# second = {"x" : 10, "y": 2}
+# combined = {**first, **second, "z": 1}
+# print(combined)
+
+
+# exercise
+# sentence = "This is a common interview question"
+# char_frequency = {}
+# for char in sentence:
+#     if char in char_frequency:
+#         char_frequency[char] += 1
+#     else:
+#         char_frequency[char] = 1
+
+# char_frequency_sorted = sorted(
+#     char_frequency.items(), key=lambda kv: kv[1], reverse=True)
+# print(char_frequency_sorted[0])
