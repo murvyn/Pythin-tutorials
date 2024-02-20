@@ -114,3 +114,70 @@
 #         return input
 
 # print(fizz_buzz(1))
+
+# DATA STRUCTURES
+# lists
+# letters = ["a", "b", "c"]
+# matrix = [[0,1], [2,3]]
+# zeros = [0] * 5
+# combined = zeros + letters
+# numbers = list(range(20))
+# chars = list("Hello World")
+# print(len(chars))
+
+# numbers  = list(range(20))
+# print(numbers[::2])
+
+# list unpacking
+# numbers = [1, 2, 3]
+# first, second, third = numbers
+# first, second, *other  = numbers
+
+# looping
+# letters = ["a", "b", "c"]
+# for index, letter in enumerate(letters):
+#     print(index, letter)
+
+# add
+# letters.append("d")
+# letters.insert(0, "-")
+
+# remove
+# letters.pop()
+# letters.pop(0)
+# letters.remove("d")
+# del letters[0:3]
+# letters.clear[]
+
+# finding items
+# print(letters.count("d"))
+# if "d" in letters:
+#     print(letters.index("d"))
+
+# sorting
+# numbers = [3,51,2,8,6]
+# numbers.sort(reverse=True)
+# print(sorted(numbers, reverse=True))
+# print(numbers)
+
+items = [
+    ("Product1", 10),
+    ("Product3", 14),
+    ("Product2", 9),
+]
+
+
+# def sort_item(item):
+#     return item[1]
+
+# lambda function
+# items.sort(key=lambda item: item[1])
+# print(items)
+
+# map function
+prices = list(map(lambda item: item[1], items))
+print(prices)
+
+# filter function
+filtered = list(filter(lambda item: item[1] >= 10, items))
+print(filtered)
