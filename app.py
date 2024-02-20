@@ -187,6 +187,13 @@
 # filtered = [item for item in items if item[1] >= 10]
 
 # zip function
-list1 = [1,2,3]
-list2 = [10,20,30]
-print(list(zip("abc", list1, list2)))
+# list1 = [1,2,3]
+# list2 = [10,20,30]
+# print(list(zip("abc", list1, list2)))
+
+# stacks
+browsing_session = []
+browsing_session.append(1)
+browsing_session.pop()
+if not browsing_session:
+    browsing_session[-1]
