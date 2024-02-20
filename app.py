@@ -1,5 +1,6 @@
 # import math
 from collections import deque
+from array import array
 # print("Hello world 😂")
 # print("*" * 10)
 
@@ -206,3 +207,6 @@ from collections import deque
 # queue.append(3)
 # queue.popleft()
 # print(queue)
+
+# array
+numbers = array("i", [1,2,3])
