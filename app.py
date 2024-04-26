@@ -1,8 +1,10 @@
+# from abc import ABC, abstractmethod
+from collections import namedtuple
 # import math
 # from collections import deque
 # from array import array
 # from sys import getsizeof
-from pprint import pprint
+# from pprint import pprint
 # print("Hello world 😂")
 # print("*" * 10)
 
@@ -210,6 +212,28 @@ from pprint import pprint
 # queue.popleft()
 # print(queue)
 
+# tuple
+# point = (1, 2, 3)
+# converting list to tuple
+# points = tuple(['hello'])
+# print(point[0:2])
+# x, y, x = point
+# if 10 in point:
+#     print("exists")
+
+# swapping variables
+# x=10
+# y=11
+# z=x
+# x=y
+# y=z
+# print(x,y)
+
+# or
+
+# x, y = y, x
+
+
 # array
 # numbers = array("i", [1,2,3])
 
@@ -229,6 +253,7 @@ from pprint import pprint
 # point["z"] = 20
 # if "a" in point:
 #     print(point["a"])
+# or
 # print(point.get("a", 0))
 # del point["x"]
 # print(point)
@@ -257,7 +282,7 @@ from pprint import pprint
 
 
 # exercise
-# sentence = "This is a common interview question"
+sentence = "This is a common interview question"
 # char_frequency = {}
 # for char in sentence:
 #     if char in char_frequency:
@@ -269,16 +294,17 @@ from pprint import pprint
 #     char_frequency.items(), key=lambda kv: kv[1], reverse=True)
 # print(char_frequency_sorted[0])
 
+
 # exceptions
 # try:
-    # with open("app.py") as file:
-        # print("File opened")
-    # age = int(input("Age: "))
-    # xfactor = 10 / age
+# with open("app.py") as file:
+# print("File opened")
+# age = int(input("Age: "))
+# xfactor = 10 / age
 # except (ValueError, ZeroDivisionError):
-    # print("You didn't enter a valid age")
+# print("You didn't enter a valid age")
 # else:
-    # print("no exceptions were thrown")
+# print("no exceptions were thrown")
 # finally:
 #     file.close()
 # print("Exception continues")
@@ -288,7 +314,189 @@ from pprint import pprint
 #         raise ValueError("Age cannot be 0 or less.")
 #     return 10 /age
 
-# try: 
+# try:
 #     calculate_xfactor(-1)
 # except ValueError as error:
 #     print(error)
+
+# classes
+# class Point:
+#     # constructor
+#     def __init__(self, x, y):
+#         self.x = x
+#         self.y = y
+
+#     # magic methods
+#     def __call__(self):
+#         return f"({self.x}, {self.y})"
+
+#     # addition
+#     def __add__(self, other):
+#         return Point(self.x + other.x, self.y + other.y)
+
+#     # classmethod
+#     @classmethod
+#     def zero(cls):
+#         return cls(0, 0)
+
+#     def draw(self):
+#         print(f"Point ({self.x}, {self.y})")
+
+
+# point = Point.zero()
+# point.draw()
+
+# custom containers
+# class TagCloud:
+#     def __init__(self):
+#         self.__tags = {}
+
+#     def add(self, tag):
+#         self.__tags[tag.lower()] = self.__tags.get(tag.lower(), 0) + 1
+
+#     def __getitem__(self, tag):
+#         return self.__tags.get(tag.lower(), 0)
+
+#     def __setitem__(self, tag, value):
+#         self.__tags[tag.lower()] = value
+
+#     def __len__(self):
+#         return len(self.__tags)
+
+#     def __iter__(self):
+#         return iter(self.__tags)
+
+# cloud = TagCloud()
+# cloud.add("python")
+# cloud.add("python")
+# cloud.add("python")
+# cloud["chem"] = 10
+# len(cloud)
+# print(cloud.__dict__)
+
+# property
+# class Projuct:
+#     def __init__(self, price):
+#         self.price = price
+
+#     @property
+#     def price(self):
+#         return self.__price
+
+#     @price.setter
+#     def price(self, value):
+#         if value < 0:
+#             raise ValueError("Price cannot be negative")
+#         self.__price = value
+
+
+# inheritance / method overriding
+# class Animal:
+#     def __init__(self):
+#         print("Animal constructor")
+#         self.age = 1
+
+#     def eat(self):
+#         print("eat")
+
+
+# class Mammal(Animal):
+#     def __init__(self):
+#         print("Mammal constructor")
+#         self.weight = 5
+#         super().__init__()
+
+#     def walk(self):
+#         print("walk")
+
+
+# class Fish(Animal):
+#     def swim(self):
+#         print("swim")
+
+# multiple inheritance
+# class Flyer:
+#     def fly(self):
+#        pass
+
+
+# class Swimmer:
+#     def swim(self):
+#         pass
+
+
+# class FlyingFish(Flyer, Swimmer):
+#     pass
+
+
+# good example of inheritance
+# class InvalidOperationError(Exception):
+#     pass
+
+
+# class Stream(ABC):
+#     def __init__(self):
+#         self.opened = False
+
+#     def open(self):
+#         if self.opened:
+#             raise InvalidOperationError("Stream already opened")
+#         self.opened = True
+
+#     def close(self):
+#         if not self.opened:
+#             raise InvalidOperationError("Stream already closed")
+#         self.opened = False
+
+#     @abstractmethod
+#     def read(self):
+#         pass
+
+
+# class FileStream(Stream):
+#     def read(self):
+#         print("reading data from a file")
+
+
+# class NetworkStream(Stream):
+#     def read(self):
+#         print("reading data from a network")
+
+# stream = Stream()
+# stream.open()
+
+
+# polymorphism
+# class UIControl(ABC):
+#     def draw(self):
+#         pass
+
+# class TextBox(UIControl):
+#     def draw(self):
+#         print("TextBox")
+
+# class DropDownList(UIControl):
+#     def draw(self):
+#         print("DropDownList")
+
+# def draw(controls):
+#     for control in controls:
+#         control.draw()
+
+# extending built-in types
+# class Text(str):
+#     def duplicated(self):
+#         return self + self
+
+
+# class TrackableList(list):
+#     def append(self, object):
+#         print("Append called")
+#         super().append(object)
+
+
+# data classes
+Point = namedtuple("Point", ["x", "y"])
+p1 = Point(x=1, y=2)
+p2 = Point(x=1, y=2)
+print(p1 == p2)
